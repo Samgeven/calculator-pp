@@ -1,0 +1,31 @@
+body {
+    font-family: $fontFamily;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+h1 {
+    font-size: 36px;
+    line-height: 48px;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.hl {
+    position: relative;
+}
+
+.hl:after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 59px;
+    background-color: $accentColor;
+    top: 60px;
+    left: 0;
+}

@@ -1,0 +1,53 @@
+.calc_row {
+    margin-top: 50px;
+}
+
+.calc-bar {
+    background-color: $lightGray;
+    height: 90px;
+    padding: 0 45px;
+}
+
+.calc-bar-line {
+    background: linear-gradient(90deg, $accentColor 8%, $darkGray 22%);
+    height: 3px;
+    width: 100%;
+    position: relative;
+    top: 32px;
+}
+
+.calc-bar-line__point {
+    background-color: $darkGray;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    position: relative;
+    top: -6px;
+    &:first-child {
+        background-color: $accentColor;
+    }
+}
+
+.calc-bar-labels_spc {
+    padding-top: 46px;
+}
+
+.calc-bar-labels__item {
+    width: 22%;
+    text-align: center;
+    &:first-child {
+        width: 12%;
+        text-align: left;
+    }
+    &:last-child {
+        width: 12%;
+        text-align: right;
+    }
+}
+
+.calc-tab-item {
+    display: none;
+    &.active {
+        display: block;
+    }
+}
