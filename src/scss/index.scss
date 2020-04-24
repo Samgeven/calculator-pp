@@ -2,6 +2,8 @@
     margin-top: 50px;
 }
 
+// Прогресс бар
+
 .calc-bar {
     background-color: $lightGray;
     height: 90px;
@@ -14,6 +16,11 @@
     width: 100%;
     position: relative;
     top: 32px;
+    transition: 0.2s;
+    &:hover {
+        background: linear-gradient(90deg, #adadad 0%, #589bda 20%, #589bda 28%, #adadad 45%);
+        transition: 0.2s;
+    }
 }
 
 .calc-bar-line__point {
@@ -23,7 +30,7 @@
     border-radius: 50%;
     position: relative;
     top: -6px;
-    &:first-child {
+    &.active {
         background-color: $accentColor;
     }
 }
