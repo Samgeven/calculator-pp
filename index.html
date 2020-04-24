@@ -34,32 +34,208 @@
                         <p class="calc-bar-labels__item">Расчёт</p>
                     </div>
                 </div>
-                <div class="calc-tab">
-                    <div class="calc-tab-item active" id="tab1" data-order="1">
-                    1
+                <form id="calc-form" action="#">
+                    <div class="calc-form_wrp">
+                        <p class="calc-tab">Укажите какие услуги вам нужны</p>
+                        <section class="calc-form-services calc-form-services_spc">
+                            <h3 class="calc-form__title">Укажите какие услуги вам нужны</h3>
+                            <div class="calc-form-services_row row">
+                                <div class="calc-form-services__item col-xl-4 col-lg-4">
+                                    <div class="calc-form-services__item-wrp d-flex align-items-center">
+                                        <img src="https://via.placeholder.com/152x120" alt="Подготовка технического плана" class="calc-form-services__img">
+                                        <h4 class="calc-form-services__title">
+                                            Подготовка
+                                            технического
+                                            плана
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="calc-form-services__item col-xl-4 col-lg-4">
+                                    <div class="calc-form-services__item-wrp d-flex align-items-center">
+                                        <img src="https://via.placeholder.com/152x120" alt="Подготовка технического плана" class="calc-form-services__img">
+                                        <h4 class="calc-form-services__title">
+                                            Вынос
+                                            границ участка
+                                            в натуру
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="calc-form-services__item col-xl-4 col-lg-4">
+                                    <div class="calc-form-services__item-wrp d-flex align-items-center">
+                                        <img src="https://via.placeholder.com/152x120" alt="Подготовка технического плана" class="calc-form-services__img">
+                                        <h4 class="calc-form-services__title">
+                                            Подготовка
+                                            межевого
+                                            плана
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="calc-form-services__item col-xl-4 col-lg-4">
+                                    <div class="calc-form-services__item-wrp d-flex align-items-center">
+                                        <img src="https://via.placeholder.com/152x120" alt="Подготовка технического плана" class="calc-form-services__img">
+                                        <h4 class="calc-form-services__title">
+                                            Исполнительная
+                                            съёмка
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="calc-form-services__item col-xl-4 col-lg-4">
+                                    <div class="calc-form-services__item-wrp d-flex align-items-center">
+                                        <img src="https://via.placeholder.com/152x120" alt="Подготовка технического плана" class="calc-form-services__img">
+                                        <h4 class="calc-form-services__title">
+                                            Топографическая
+                                            съёмка
+                                        </h4>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </section>
+                        <p class="calc-tab">Укажите адрес работ</p>
+                        <section class="calc-form-adress">
+                            <h3 class="calc-form__title">Укажите адрес работ</h3>
+                            <div class="calc_input-wrp d-flex">
+                                <input class="calc__input" id="calcAdress" name="calcAdress" type="text" class="required" placeholder="Москва, МО,">
+                                <div class="calc__tooltip"></div>
+                            </div>
+                        </section>
+                        <p class="calc-tab">
+                            Укажите площадь объекта в сотках
+                        </p>
+                        <section class="calc-form-area calc-form-area_spc">
+                            <h3 class="calc-form__title">
+                                Укажите площадь объекта в сотках
+                            </h3>
+                            <input class="calc__input" id="calcArea" name="calcArea" type="number" min="0" class="required" placeholder="99">
+                            <div class="custom-control custom-checkbox">
+                                <input class="custom-control-input" id="sendDocs" name="sendDocs" type="checkbox"> 
+                                <label class="custom-control-label checkbox-label" for="sendDocs">Подать документы</label>
+                            </div>
+                        </section>
+                        <p class="calc-tab">Оставьте свои данные для расчёта суммы</p>
+                        <section class="calc-form-personal calc-form-personal_spc">
+                            <h3 class="calc-form__title">Оставьте свои данные для расчёта суммы</h3>
+                            <div class="calc-form-personal_row row">
+                                <div class="calc-form-personal_left col-xl-6">
+                                    <div class="calc-form-input-group d-flex">
+                                        <input class="calc__input" id="calcName" name="calcName" type="text" class="required" placeholder="Имя">
+                                        <input class="calc__input" id="calcPhone" name="calcPhone" type="text" class="required" placeholder="Телефон">
+                                    </div>
+                                    <input type="text" class="calc__input big" id="calcComment" name="calcComment" placeholder="Комментарий">
+                                    <div class="custom-control custom-checkbox mt-1">
+                                        <input class="custom-control-input" id="acceptPolicy" name="acceptPolicy" type="checkbox"> 
+                                        <label class="custom-control-label checkbox-label" for="acceptPolicy">
+                                            Согласие с <a class="calc__label-link" href="">Политикой персональных данных</a>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="calc-form-personal_right col-xl-6">
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" id="calcCall" name="calcCall" type="checkbox"> 
+                                        <label class="custom-control-label checkbox-label" for="calcCall">
+                                            Позвонить на телефон
+                                        </label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox mt-1">
+                                        <input class="custom-control-input" id="calcWhatsApp" name="calcWhatsApp" type="checkbox"> 
+                                        <label class="custom-control-label checkbox-label" for="calcWhatsApp">
+                                            Отправить сообщение в WhatsApp
+                                        </label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox mt-1">
+                                        <input class="custom-control-input" id="calcViber" name="calcViber" type="checkbox"> 
+                                        <label class="custom-control-label checkbox-label" for="calcViber">
+                                            Отправить сообщение в Viber
+                                        </label>
+                                    </div>
+                                    <div class="calc__tooltip"></div>
+                                </div>
+                            </div>
+                        </section>
+                        <p class="calc-tab">Примерная сумма проекта</p>
+                        <section class="calc-form-result">
+                            <h3 class="calc-form__title">
+                                Примерная сумма проекта
+                            </h3>
+                            <div class="calc-form-result_row">
+                                <div class="calc-form-result-item">
+                                    <div class="calc-form-result-item_spc row">
+                                        <div class="calc-form-result-item-col calc-form-result-item-col1 col-xl-4">
+                                            <div class="calc-form-result-item-col_spc row">
+                                                <div class="calc-form-result-item-col_wrp d-flex col-xl-5">
+                                                    <div class="calc-form-result-item-col__title">
+                                                        1. Услуга:
+                                                    </div>
+                                                    <div class="calc-form-result-item-col__dots"></div>
+                                                </div>
+                                                <div class="calc-form-result-item-col__value col-xl-7">
+                                                    Исполнительная съёмка
+                                                </div>
+                                                <div class="calc-form-result-item-col_wrp mt-4 d-flex col-xl-5">
+                                                    <div class="calc-form-result-item-col__title">
+                                                        По адресу:
+                                                    </div>
+                                                    <div class="calc-form-result-item-col__dots"></div>
+                                                </div>
+                                                <div class="calc-form-result-item-col__value mt-4 col-xl-7">
+                                                    Москва, МО
+                                                </div>
+                                                <div class="calc-form-result-item-col_wrp mt-4 d-flex col-xl-5">
+                                                    <div class="calc-form-result-item-col__title">
+                                                        Площадь:
+                                                    </div>
+                                                    <div class="calc-form-result-item-col__dots"></div>
+                                                </div>
+                                                <div class="calc-form-result-item-col__value mt-4 col-xl-7">
+                                                    21 сотка
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="calc-form-result-item-col calc-form-result-item-col2 col-xl-4">
+                                            <div class="calc-form-result-item-col_spc row">
+                                                <div class="calc-form-result-item-col_wrp d-flex col-xl-8">
+                                                    <div class="calc-form-result-item-col__title">
+                                                        Ориентировочная
+                                                        стоимость услуги:
+                                                    </div>
+                                                    <div class="calc-form-result-item-col__dots"></div>
+                                                </div>
+                                                <div class="calc-form-result-item-col__value col-xl-4">
+                                                    10 000 р.
+                                                </div>
+                                                <div class="calc-form-result-item-col_wrp mt-4 d-flex col-xl-8">
+                                                    <div class="calc-form-result-item-col__title">
+                                                        Скидка:
+                                                    </div>
+                                                    <div class="calc-form-result-item-col__dots"></div>
+                                                </div>
+                                                <div class="calc-form-result-item-col__value mt-4 col-xl-4">
+                                                    10%
+                                                </div>
+                                                <div class="calc-form-result-item-col_wrp mt-4 d-flex col-xl-8">
+                                                    <div class="calc-form-result-item-col__title">
+                                                        Стоимость услуги
+                                                        с учетом скидки:
+                                                    </div>
+                                                    <div class="calc-form-result-item-col__dots"></div>
+                                                </div>
+                                                <div class="calc-form-result-item-col__value mt-4 col-xl-4">
+                                                    9 000 р.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
                     </div>
-                    <div class="calc-tab-item" id="tab2" data-order="2">
-                    2
-                    </div>
-                    <div class="calc-tab-item" id="tab3" data-order="3">
-                        3
-                    </div>
-                    <div class="calc-tab-item" id="tab4" data-order="4">
-                        4
-                    </div>
-                    <div class="calc-tab-item" id="tab5" data-order="5">
-                        5
-                    </div>
-                    <ul class="pager wizard">
-                        <li class="btn_nav previous" data-goto="prev"><a href="#">First</a></li>
-                        <li class="btn_nav next" data-goto="next"><a href="#">Previous</a></li>
-                    </ul>
-                </div>
+                </form>
             </div>
         </div>
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap-wizard/1.2/jquery.bootstrap.wizard.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js" integrity="sha256-sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.min.js"></script>
     <script src="dist/js/app.js"></script>
 </body>

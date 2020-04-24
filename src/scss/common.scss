@@ -13,7 +13,23 @@ h1 {
 
 h2 {
     font-size: 20px;
-    line-height: 28px;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+h4 {
+    font-weight: 500;
+}
+
+label {
+    font-size: 14px;
+    line-height: 16px;
 }
 
 .hl {
@@ -28,4 +44,9 @@ h2 {
     background-color: $accentColor;
     top: 60px;
     left: 0;
+}
+
+.btn {
+    padding: 15px 55px 15px 32px;
+    border: 2px solid $accentColor;
 }

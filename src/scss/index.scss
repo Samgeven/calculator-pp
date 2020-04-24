@@ -35,6 +35,7 @@
 .calc-bar-labels__item {
     width: 22%;
     text-align: center;
+    font-weight: 500;
     &:first-child {
         width: 12%;
         text-align: left;
@@ -45,9 +46,254 @@
     }
 }
 
+.calc-form-services_spc {
+    margin-top: 30px; 
+}
+
+.calc-form_wrp {
+    margin-top: 45px;
+    position: relative;
+}
+
 .calc-tab-item {
     display: none;
     &.active {
         display: block;
     }
+}
+
+.steps ul {
+    display: none;
+}
+
+.title {
+    display: none;
+    &.current {
+        display: block; 
+    }
+}
+
+.calc-form-services__item {
+    margin-top: 14px;
+}
+
+.calc-form-services__item-wrp {
+    background-color: $lightGray;
+    padding-right: 32px;
+    cursor: pointer;
+    &.active {
+        outline: 2px solid $accentColor;
+    }
+}
+
+.calc-form-services__title {
+    margin-left: 22px;
+}
+
+a[role="menuitem"] {
+    padding: 10px 55px 10px 32px;
+    border: 2px solid $darkGray;
+    display: inline-block;
+    &:hover {
+        border: 2px solid $accentColor;
+    }
+
+}
+
+ul[role="menu"] {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 25px;
+    & li a {
+        color: $fontColor;
+        position: relative;
+        &:hover {
+            text-decoration: none;
+            color: $accentColor;
+        }
+    }
+    & li.disabled {
+        display: none;
+    }
+    & li:first-child {
+        margin-right: 5px;
+        & a {
+            padding: 10px 36px 10px 65px;
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                background: url(../../dist/img/arrow-back.svg) no-repeat;
+                width: 18px;
+                height: 12px;
+                left: 35px;
+                top: 16px;
+            }
+        }
+    }
+    & li:nth-child(2) {
+        & a:after {
+            content: "";
+            position: absolute;
+            background: url(../../dist/img/arrow-back.svg) no-repeat;
+            transform: rotate(180deg);
+            width: 18px;
+            height: 12px;
+            right: 30px;
+            top: 16px;
+        }
+    }
+}
+
+.calc__tooltip {
+    width: 38px;
+    height: 38px;
+    background: url(../../dist/img/tooltip.svg) no-repeat;
+}
+
+.calc__input {
+    width: 100%;
+    margin-right: 14px;
+    padding: 10px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 300;
+}
+
+.calc_input-wrp {
+    margin-top: 30px;
+}
+
+.calc-form-area_spc {
+    margin-top: 30px;
+}
+
+.calc-form-area input {
+    max-width: 247px;
+}
+
+// Кастомные чекбоксы
+
+.calc-form-area .custom-control.custom-checkbox {
+    display: inline-block;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::after {
+    background-image: url(../../dist/img/check.svg);
+    width: 23px;
+    height: 21px;
+    background-size: 16px 12px;
+    border-color: $darkGray;
+    border-radius: 0
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+    border-color: $darkGray;
+    background-color: #fff;
+    border-radius: 0
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+}
+
+.custom-control-label::before {
+    width: 22px;
+    height: 22px;
+    border: 1px solid $darkGray;
+    border-radius: 0
+}
+
+.checkbox-label {
+    padding-left: 6px;
+    padding-top: 6px;
+}
+
+ /*
+.calc-form_wrp ul[role="menu"] {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+*/
+
+// Страница с контактами
+
+.calc-form-personal_spc {
+    margin-top: 30px;
+}
+
+.calc__input.big {
+    height: 70px;
+    margin-top: 6px;
+}
+
+.calc-form-personal .calc__input {
+    margin-right: 10px;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.calc-form-personal_right {
+    margin-top: -4px;
+}
+
+.calc__label-link {
+    text-decoration: underline;
+}
+
+.calc-form-personal .calc__tooltip {
+    position: absolute;
+    right: 12px;
+    bottom: 24px;
+}
+
+.calc-tab {
+    display: none !important; 
+}
+
+.calc-form__title {
+    margin-bottom: 30px;
+}
+
+// Результаты расчета
+
+.calc-form-result-item {
+    border: 1px solid $lightGray;
+}
+
+.calc-form-result-item-col {
+    padding: 30px 35px 70px;
+}
+
+.calc-form-result-item_spc .calc-form-result-item-col2 {
+    background-color: $lightGray;
+}
+
+.calc-form-result-item-col__dots {
+    flex-grow: 1;
+    margin-bottom: 0.35rem;
+    border-bottom: 1px dotted $darkGray;
+}
+
+.calc-form-result-item-col__title {
+    max-width: 120px;
+}
+
+.calc-form-result-item-col_wrp {
+    padding: 0;
+    padding-left: 15px;
+    align-items: baseline;
+}
+
+.calc-form-result-item-col__title {
+    font-size: 14px;
+    line-height: 24px;
+    padding: 0;
+}
+
+.calc-form-result-item-col__value {
+    padding: 0;
+    font-weight: 500;
 }
