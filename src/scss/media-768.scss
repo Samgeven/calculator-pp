@@ -1,0 +1,154 @@
+@media (max-width: 767.9px) {
+    h1 {
+        font-size: 28px;
+        line-height: 36px;
+        text-align: center;
+    }
+
+    .hl:after {
+        left: 113px;
+        top: 50px;
+    }
+
+    .calc-form-services__item-wrp {
+        overflow: hidden;
+    }
+
+    .calc-form-services__img {
+        margin-left: -30px;
+    }
+
+    .steps ul {
+        display: block;
+        visibility: hidden;
+    }
+
+    .steps ul.active {
+        opacity: 1;
+        transition: 0.2s;
+        visibility: visible;
+    }
+    
+    .calc-bar {
+        display: none;
+    }
+
+    ul[role="tablist"] {
+        position: absolute;
+        z-index: 100;
+        top: -45px;
+        width: 100%;
+    }
+
+    ul[role="tablist"] .number {
+        display: none;
+    }
+
+    ul[role="tablist"] li {
+        padding: 15px;
+        background-color: #f4f4f4;
+        color: #589bda;
+        font-size: 18px;
+        border-top: 1px solid $darkGray;
+        & a {
+            display: block;
+        }
+    }
+
+    .calc-options {
+        display: block;
+        padding: 18px;
+        background-color: #f4f4f4;
+        color: #589bda;
+        font-size: 18px;
+        font-weight: 500;
+        position: relative;
+        min-height: 60px;
+        &:after {
+            content: "";
+            position: absolute;
+            background: url(../../dist/img/arrow-select.svg) no-repeat;
+            width: 10px;
+            height: 10px;
+            top: 27px;
+            right: 16px;
+        }
+    }
+
+    ul[role="menu"] li:first-child a {
+        padding: 10px 34px 10px 58px;
+    }
+
+    ul[role="menu"] li:nth-child(2) a {
+        padding: 10px 50px 10px 32px;
+    }
+
+    ul[role="menu"] li:first-child a:before {
+        left: 27px;
+    }
+
+    ul[role="menu"] li:nth-child(2) a:after {
+        right: 20px;
+    }
+
+    .calc__input {
+        max-width: 240px;
+    }
+
+    .calc-form-area input {
+        max-width: none;
+    }
+
+    .calc-form-area .custom-checkbox {
+        margin-top: 8px;
+    }
+
+    .calc-form-area .calc__tooltip {
+        top: 127px;
+    }
+
+    .calc__input.big {
+        max-width: none;
+    }
+
+    .custom-checkbox__policy {
+        margin-bottom: 50px;
+    }
+
+    .calc-form-personal .calc__tooltip {
+        bottom: -110px;
+        left: 12px;
+    }
+
+    .calc-form-result-item_spc .calc-form-result-item-col2 {
+        padding: 30px 10px 30px 15px;
+        margin: 0px 15px;
+    }
+
+    .calc-form-result-item + .calc-form-result-item-col_wrp .arrow-anchor {
+        right: -85px;
+        top: 0px;
+    }
+
+    .calc-form-result-price__note {
+        font-size: 22px;
+    }
+
+    .calc-form-result-price {
+        text-align: center;
+    }
+
+    .calc-form-result-price .calc-form-result-item-col__dots {
+        display: none;
+    }
+
+    .calc-form-result-price__ammount,
+    .calc-form-result-price__note  {
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .calc-form-result-price__ammount {
+        margin-top: 20px;
+    }
+}

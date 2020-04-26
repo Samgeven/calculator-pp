@@ -3,9 +3,17 @@ $(document).ready(function() {
 	$('.calc-form-services__item-wrp').click(function() {
 		$(this).toggleClass('active');
 	});
+	$('.calc-options').click(function() {
+		$('.steps ul').toggleClass('active');
+	});
+	$("ul[role='tablist'] a").click(function() {
+		let selectText = $(this).prop("innerText");
+		$('.calc-options').text(selectText);
+		$('.steps ul').removeClass('active');
+	});
 });
 
-//forms
+// forms
 
 var form = $("#calc-form");
 form.validate({
@@ -20,16 +28,24 @@ form.children("div").steps({
     headerTag: "p",
     bodyTag: "section",
     transitionEffect: "fade",
-    transitionEffectSpeed: "400",
+	transitionEffectSpeed: "400",
+	enableAllSteps: true,
 	labels: {
 	    next: "Дальше",
-	    previous: "Назад"
+		previous: "Назад",
+		current: ""
 	},
     onStepChanging: function (event, currentIndex, newIndex)
     {
     	// Манипуляции с прогресс баром
     	$('.calc-bar-line__point').removeClass('active');
-    	$(`.calc-bar-line__point:nth-child(${newIndex + 1})`).addClass('active');
+		$(`.calc-bar-line__point:nth-child(${newIndex + 1})`).addClass('active');
+		function changeText () {
+			$('.calc-options').text($('.calc-tab.current').prop("innerText"));
+		}
+		setTimeout(changeText, 200);
+
+		$('ul[role="menu"]').css('display', 'flex');
 
     	if (newIndex == 0) {
     		$('.calc-bar-line').css('background', `linear-gradient(90deg, #589bda 8%, #adadad 22%)`);
@@ -44,7 +60,8 @@ form.children("div").steps({
     		$('.calc-bar-line').css('background', `linear-gradient(90deg, rgb(173, 173, 173) 45%, rgb(88, 155, 218) 80%, rgb(88, 155, 218) 78%, rgb(173, 173, 173) 90%)`);
     	}
     	if (newIndex == 4) {
-    		$('.calc-bar-line').css('background', `linear-gradient(90deg, #adadad 75%, #589bda 100%)`);
+			$('.calc-bar-line').css('background', `linear-gradient(90deg, #adadad 75%, #589bda 100%)`);
+			$('ul[role="menu"]').css('display', 'none');
     	}
 
         form.validate().settings.ignore = ":disabled,:hidden";

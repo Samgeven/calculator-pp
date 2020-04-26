@@ -1,8 +1,12 @@
+html {
+  scroll-behavior: smooth; }
+
 body {
   font-family: "Ubuntu", sans-serif;
   font-weight: 300;
   font-size: 16px;
-  line-height: 24px; }
+  line-height: 24px;
+  scroll-behavior: smooth; }
 
 h1 {
   font-size: 36px;
@@ -39,12 +43,74 @@ label {
   left: 0; }
 
 .btn {
-  padding: 15px 55px 15px 32px;
-  border: 2px solid #589bda; }
+  padding: 12px 34px;
+  border: 2px solid #589bda;
+  font-weight: 300;
+  border-radius: 0; }
 
 .text-big {
-  font-size: 20px;
-  line-height: 24px; }
+  font-size: 20px !important;
+  line-height: 24px !important; }
+
+.text-accent {
+  color: #589bda; }
+
+.text-dotted {
+  border-bottom: 1px dotted #adadad; }
+
+.arrow-anchor {
+  background: url(../../dist/img/anchor.svg) no-repeat;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 7px;
+  right: -12px; }
+
+.calc-tooltip-note {
+  visibility: hidden;
+  font-size: 14px;
+  line-height: 20px;
+  width: 180px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 30px;
+  left: 3px;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s; }
+  .calc-tooltip-note:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent; }
+
+.calc__tooltip {
+  position: relative; }
+
+.calc__tooltip:hover .calc-tooltip-note {
+  visibility: visible;
+  opacity: 1; }
+
+@media (max-width: 1199.9px) {
+  .container {
+    max-width: 750px; } }
+
+@media (max-width: 989.9px) {
+  .container {
+    max-width: 750px; } }
+
+@media (max-width: 767.9px) {
+  .container {
+    max-width: 320px; } }
 
 .calc_row {
   margin-top: 50px; }
@@ -102,6 +168,11 @@ label {
     display: block; }
 
 .steps ul {
+  display: none;
+  opacity: 0;
+  transition: 0.2s; }
+
+.calc-options {
   display: none; }
 
 .title {
@@ -109,13 +180,19 @@ label {
   .title.current {
     display: block; }
 
+.calc-form-area .calc__tooltip {
+  position: absolute;
+  top: 56px;
+  right: 0; }
+
 .calc-form-services__item {
   margin-top: 14px; }
 
 .calc-form-services__item-wrp {
   background-color: #f4f4f4;
   padding-right: 32px;
-  cursor: pointer; }
+  cursor: pointer;
+  outline: 1px solid #adadad; }
   .calc-form-services__item-wrp.active {
     outline: 2px solid #589bda; }
 
@@ -132,7 +209,8 @@ a[role="menuitem"] {
 ul[role="menu"] {
   display: flex;
   justify-content: flex-end;
-  margin-top: 25px; }
+  margin-top: 25px;
+  margin-bottom: 25px; }
   ul[role="menu"] li a {
     color: #151515;
     position: relative; }
@@ -245,6 +323,9 @@ ul[role="menu"] {
   right: 12px;
   bottom: 24px; }
 
+.custom-checkbox__policy {
+  margin-left: 15px !important; }
+
 .calc-tab {
   display: none !important; }
 
@@ -254,8 +335,15 @@ ul[role="menu"] {
 .calc-form-result-item {
   border: 1px solid #f4f4f4; }
 
+.calc-form-result-item:nth-child(3),
+.calc-form-result-item:nth-child(4) {
+  margin-top: 12px; }
+
 .calc-form-result-item-col {
-  padding: 30px 35px 70px; }
+  padding: 30px 35px; }
+
+.calc-form-result-item-col_spc {
+  height: 100%; }
 
 .calc-form-result-item_spc .calc-form-result-item-col2 {
   background-color: #f4f4f4; }
@@ -281,3 +369,30 @@ ul[role="menu"] {
 .calc-form-result-item-col__value {
   padding: 0;
   font-weight: 500; }
+
+.calc-form-result-item-col__budget {
+  max-width: none; }
+
+.calc-form-result-price {
+  align-items: flex-end; }
+
+.calc-form-result-price_spc {
+  margin-top: 60px; }
+
+.calc-form-result-price__note {
+  font-size: 32px;
+  line-height: 38px;
+  font-weight: 500; }
+
+.calc-form-result-price__ammount {
+  font-size: 52px;
+  line-height: 52px;
+  font-weight: 500; }
+
+.calc-form-result-price .calc-form-result-item-col__dots {
+  border-bottom: 2px dotted #adadad; }
+
+.btn_wrp {
+  margin-top: 57px;
+  margin-bottom: 90px;
+  text-align: center; }

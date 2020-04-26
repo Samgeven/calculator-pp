@@ -14,10 +14,13 @@
 <body>
     <section class="calc">
         <div class="calc_wrp container mt-4">
-            <h1 class="calc__title hl d-inline-block">
+            <h1 class="calc__title hl">
                 Калькулятор
             </h1>
             <div class="calc_row">
+                <div class="calc-options">
+                    Услуга
+                </div>
                 <div class="calc-bar col-xl-12">
                     <div class="calc-bar-line d-flex justify-content-between">
                         <div class="calc-bar-line__point active"></div>
@@ -36,13 +39,13 @@
                 </div>
                 <form id="calc-form" action="#">
                     <div class="calc-form_wrp">
-                        <p class="calc-tab">Укажите какие услуги вам нужны</p>
+                        <p class="calc-tab">Услуга</p>
                         <section class="calc-form-services calc-form-services_spc">
                             <h3 class="calc-form__title">Укажите какие услуги вам нужны</h3>
                             <div class="calc-form-services_row row">
-                                <div class="calc-form-services__item col-xl-4 col-lg-4">
+                                <div class="calc-form-services__item col-xl-4 col-lg-6 col-md-6">
                                     <div class="calc-form-services__item-wrp d-flex align-items-center">
-                                        <img src="https://via.placeholder.com/152x120" alt="Подготовка технического плана" class="calc-form-services__img">
+                                        <img src="dist/img/Layer_797.jpg" alt="Подготовка технического плана" class="calc-form-services__img">
                                         <h4 class="calc-form-services__title">
                                             Подготовка
                                             технического
@@ -50,9 +53,9 @@
                                         </h4>
                                     </div>
                                 </div>
-                                <div class="calc-form-services__item col-xl-4 col-lg-4">
+                                <div class="calc-form-services__item col-xl-4 col-lg-6 col-md-6">
                                     <div class="calc-form-services__item-wrp d-flex align-items-center">
-                                        <img src="https://via.placeholder.com/152x120" alt="Подготовка технического плана" class="calc-form-services__img">
+                                        <img src="dist/img/Layer_798.jpg" alt="Вынос границ участка в натуру" class="calc-form-services__img">
                                         <h4 class="calc-form-services__title">
                                             Вынос
                                             границ участка
@@ -60,9 +63,9 @@
                                         </h4>
                                     </div>
                                 </div>
-                                <div class="calc-form-services__item col-xl-4 col-lg-4">
+                                <div class="calc-form-services__item col-xl-4 col-lg-6 col-md-6">
                                     <div class="calc-form-services__item-wrp d-flex align-items-center">
-                                        <img src="https://via.placeholder.com/152x120" alt="Подготовка технического плана" class="calc-form-services__img">
+                                        <img src="dist/img/Layer_799.jpg" alt="Подготовка межевого плана" class="calc-form-services__img">
                                         <h4 class="calc-form-services__title">
                                             Подготовка
                                             межевого
@@ -70,37 +73,43 @@
                                         </h4>
                                     </div>
                                 </div>
-                                <div class="calc-form-services__item col-xl-4 col-lg-4">
+                                <div class="calc-form-services__item col-xl-4 col-lg-6 col-md-6">
                                     <div class="calc-form-services__item-wrp d-flex align-items-center">
-                                        <img src="https://via.placeholder.com/152x120" alt="Подготовка технического плана" class="calc-form-services__img">
+                                        <img src="dist/img/Layer_800.jpg" alt="Испольнительная съемка" class="calc-form-services__img">
                                         <h4 class="calc-form-services__title">
                                             Исполнительная
                                             съёмка
                                         </h4>
                                     </div>
                                 </div>
-                                <div class="calc-form-services__item col-xl-4 col-lg-4">
+                                <div class="calc-form-services__item col-xl-4 col-lg-6 col-md-6">
                                     <div class="calc-form-services__item-wrp d-flex align-items-center">
-                                        <img src="https://via.placeholder.com/152x120" alt="Подготовка технического плана" class="calc-form-services__img">
+                                        <img src="dist/img/Layer_801.jpg" alt="Топографическая съемка" class="calc-form-services__img">
                                         <h4 class="calc-form-services__title">
                                             Топографическая
                                             съёмка
                                         </h4>
                                     </div>
                                 </div>
-
+                                <div class="calc-form-services__item col-xl-4 col-lg-6 col-md-6">
+                                
+                                </div>
                             </div>
                         </section>
-                        <p class="calc-tab">Укажите адрес работ</p>
+                        <p class="calc-tab">Адрес</p>
                         <section class="calc-form-adress">
                             <h3 class="calc-form__title">Укажите адрес работ</h3>
                             <div class="calc_input-wrp d-flex">
                                 <input class="calc__input" id="calcAdress" name="calcAdress" type="text" class="required" placeholder="Москва, МО,">
-                                <div class="calc__tooltip"></div>
+                                <div class="calc__tooltip">
+                                    <div class="calc-tooltip-note">
+                                        Note goes there
+                                    </div>
+                                </div>
                             </div>
                         </section>
                         <p class="calc-tab">
-                            Укажите площадь объекта в сотках
+                            Площадь
                         </p>
                         <section class="calc-form-area calc-form-area_spc">
                             <h3 class="calc-form__title">
@@ -111,25 +120,24 @@
                                 <input class="custom-control-input" id="sendDocs" name="sendDocs" type="checkbox"> 
                                 <label class="custom-control-label checkbox-label" for="sendDocs">Подать документы</label>
                             </div>
+                            <div class="calc__tooltip">
+                                <div class="calc-tooltip-note">
+                                    Note goes there
+                                </div>
+                            </div>
                         </section>
-                        <p class="calc-tab">Оставьте свои данные для расчёта суммы</p>
+                        <p class="calc-tab">Ваши контакты</p>
                         <section class="calc-form-personal calc-form-personal_spc">
                             <h3 class="calc-form__title">Оставьте свои данные для расчёта суммы</h3>
                             <div class="calc-form-personal_row row">
-                                <div class="calc-form-personal_left col-xl-6">
+                                <div class="calc-form-personal_left col-xl-6 col-lg-7 col-md-7">
                                     <div class="calc-form-input-group d-flex">
                                         <input class="calc__input" id="calcName" name="calcName" type="text" class="required" placeholder="Имя">
                                         <input class="calc__input" id="calcPhone" name="calcPhone" type="text" class="required" placeholder="Телефон">
                                     </div>
                                     <textarea class="calc__input big" placeholder="Комментарий"></textarea>
-                                    <div class="custom-control custom-checkbox mt-1">
-                                        <input class="custom-control-input" id="acceptPolicy" name="acceptPolicy" type="checkbox"> 
-                                        <label class="custom-control-label checkbox-label" for="acceptPolicy">
-                                            Согласие с <a class="calc__label-link" href="">Политикой персональных данных</a>
-                                        </label>
-                                    </div>
                                 </div>
-                                <div class="calc-form-personal_right col-xl-6">
+                                <div class="calc-form-personal_right col-xl-6 col-lg-5 col-md-5">
                                     <div class="custom-control custom-checkbox">
                                         <input class="custom-control-input" id="calcCall" name="calcCall" type="checkbox"> 
                                         <label class="custom-control-label checkbox-label" for="calcCall">
@@ -148,11 +156,21 @@
                                             Отправить сообщение в Viber
                                         </label>
                                     </div>
-                                    <div class="calc__tooltip"></div>
+                                    <div class="calc__tooltip">
+                                        <div class="calc-tooltip-note">
+                                            Note goes there
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="custom-control custom-checkbox custom-checkbox__policy col-xl-12 mt-xl-1 mt-lg-1 mt-md-1 mt-sm-3 mt-3">
+                                    <input class="custom-control-input" id="acceptPolicy" name="acceptPolicy" type="checkbox"> 
+                                    <label class="custom-control-label checkbox-label" for="acceptPolicy">
+                                        Согласие с <a class="calc__label-link" href="">Политикой персональных данных</a>
+                                    </label>
                                 </div>
                             </div>
                         </section>
-                        <p class="calc-tab">Примерная сумма проекта</p>
+                        <p class="calc-tab">Расчет</p>
                         <section class="calc-form-result">
                             <h3 class="calc-form__title">
                                 Примерная сумма проекта
@@ -160,84 +178,266 @@
                             <div class="calc-form-result_row">
                                 <div class="calc-form-result-item">
                                     <div class="calc-form-result-item_spc row">
-                                        <div class="calc-form-result-item-col calc-form-result-item-col1 col-xl-4">
+                                        <div class="calc-form-result-item-col calc-form-result-item-col1 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
                                             <div class="calc-form-result-item-col_spc row">
-                                                <div class="calc-form-result-item-col_wrp d-flex col-xl-5">
+                                                <div class="calc-form-result-item-col_wrp d-flex col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5">
                                                     <div class="calc-form-result-item-col__title">
                                                         1. Услуга:
                                                     </div>
                                                     <div class="calc-form-result-item-col__dots"></div>
                                                 </div>
-                                                <div class="calc-form-result-item-col__value col-xl-7">
+                                                <div class="calc-form-result-item-col__value col-xl-7 col-lg-7 col-md-6 col-sm-6 col-6">
                                                     Исполнительная съёмка
                                                 </div>
-                                                <div class="calc-form-result-item-col_wrp mt-4 d-flex col-xl-5">
+                                                <div class="calc-form-result-item-col_wrp mt-4 d-flex col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5">
                                                     <div class="calc-form-result-item-col__title">
                                                         По адресу:
                                                     </div>
                                                     <div class="calc-form-result-item-col__dots"></div>
                                                 </div>
-                                                <div class="calc-form-result-item-col__value mt-4 col-xl-7">
+                                                <div class="calc-form-result-item-col__value mt-4 col-xl-7 col-lg-7 col-md-7 col-sm-7 col-7">
                                                     Москва, МО
                                                 </div>
-                                                <div class="calc-form-result-item-col_wrp mt-4 d-flex col-xl-5">
+                                                <div class="calc-form-result-item-col_wrp mt-4 d-flex col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5">
                                                     <div class="calc-form-result-item-col__title">
                                                         Площадь:
                                                     </div>
                                                     <div class="calc-form-result-item-col__dots"></div>
                                                 </div>
-                                                <div class="calc-form-result-item-col__value mt-4 col-xl-7">
+                                                <div class="calc-form-result-item-col__value mt-4 col-xl-7 col-lg-7 col-md-7 col-sm-7 col-7">
                                                     21 сотка
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="calc-form-result-item-col calc-form-result-item-col2 col-xl-4">
+                                        <div class="calc-form-result-item-col calc-form-result-item-col2 col-xl-4 col-lg-4 col-md-4">
                                             <div class="calc-form-result-item-col_spc row">
-                                                <div class="calc-form-result-item-col_wrp d-flex col-xl-8">
+                                                <div class="calc-form-result-item-col_wrp d-flex col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9">
                                                     <div class="calc-form-result-item-col__title">
                                                         Ориентировочная
                                                         стоимость услуги:
                                                     </div>
                                                     <div class="calc-form-result-item-col__dots"></div>
                                                 </div>
-                                                <div class="calc-form-result-item-col__value col-xl-4">
+                                                <div class="calc-form-result-item-col__value col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
                                                     10 000 р.
                                                 </div>
-                                                <div class="calc-form-result-item-col_wrp mt-4 d-flex col-xl-8">
+                                                <div class="calc-form-result-item-col_wrp mt-4 d-flex col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9">
                                                     <div class="calc-form-result-item-col__title">
                                                         Скидка:
                                                     </div>
                                                     <div class="calc-form-result-item-col__dots"></div>
                                                 </div>
-                                                <div class="calc-form-result-item-col__value mt-4 col-xl-4">
+                                                <div class="calc-form-result-item-col__value text-accent mt-4 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
                                                     10%
                                                 </div>
-                                                <div class="calc-form-result-item-col_wrp mt-4 d-flex col-xl-8">
+                                                <div class="calc-form-result-item-col_wrp mt-4 d-flex col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9">
                                                     <div class="calc-form-result-item-col__title">
                                                         Стоимость услуги
                                                         с учетом скидки:
                                                     </div>
                                                     <div class="calc-form-result-item-col__dots"></div>
                                                 </div>
-                                                <div class="calc-form-result-item-col__value mt-4 col-xl-4">
+                                                <div class="calc-form-result-item-col__value text-accent mt-4 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
                                                     9 000 р.
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="calc-form-result-item-col calc-form-result-item-col3 col-xl-4">
+                                        <div class="calc-form-result-item-col calc-form-result-item-col3 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
                                             <div class="calc-form-result-item-col_spc row">
-                                                <div class="calc-form-result-item-col_wrp d-flex col-xl-4">
+                                                <div class="calc-form-result-item-col_wrp d-flex col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
                                                     <div class="calc-form-result-item-col__title">
                                                         Акция
                                                     </div>
+                                                    <div class="calc-form-result-item-col__dots d-xl-block d-lg-none d-md-none d-sm-none d-none"></div>
+                                                </div>
+                                                <div class="calc-form-result-item-col__value text-big text-accent col-xl-8 col-lg-12 col-md-12 col-sm-12 col-12 pl-3 pl-xl-0 mt-3 mt-xl-0 mt-lg-0 mt-md-0">
+                                                    Геоакция на Март
+                                                </div>
+                                                <div class="calc-form-result-item-col_wrp d-xl-flex d-lg-flex align-self-end col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 d-xl-block d-lg-block d-md-block d-sm-none d-none">
+                                                    <div class="calc-form-result-item-col__budget calc-form-result-item-col__title text-accent">
+                                                        <span class="text-dotted">Ориентировочный бюджет
+                                                        проекта с четом скидки:</span>
+                                                    </div>
+                                                    <a href="#result" class="arrow-anchor"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc-form-result-item-col_wrp d-flex align-self-end col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 d-block d-sm-block d-md-none d-lg-none d-xl-none  mt-4 mb-4">
+                                    <div class="calc-form-result-item-col__budget calc-form-result-item-col__title text-accent">
+                                        <span class="text-dotted">Ориентировочный бюджет
+                                        проекта с четом скидки:</span>
+                                    </div>
+                                    <a href="#result" class="arrow-anchor"></a>
+                                </div>
+                                <div class="calc-form-result-item">
+                                    <div class="calc-form-result-item_spc row">
+                                        <div class="calc-form-result-item-col calc-form-result-item-col1 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                                            <div class="calc-form-result-item-col_spc row">
+                                                <div class="calc-form-result-item-col_wrp d-flex col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5">
+                                                    <div class="calc-form-result-item-col__title">
+                                                        1. Услуга:
+                                                    </div>
                                                     <div class="calc-form-result-item-col__dots"></div>
                                                 </div>
-                                                <div class="calc-form-result-item-col__value text-big col-xl-8">
+                                                <div class="calc-form-result-item-col__value col-xl-7 col-lg-7 col-md-6 col-sm-6 col-6">
+                                                    Исполнительная съёмка
+                                                </div>
+                                                <div class="calc-form-result-item-col_wrp mt-4 d-flex col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5">
+                                                    <div class="calc-form-result-item-col__title">
+                                                        По адресу:
+                                                    </div>
+                                                    <div class="calc-form-result-item-col__dots"></div>
+                                                </div>
+                                                <div class="calc-form-result-item-col__value mt-4 col-xl-7 col-lg-7 col-md-7 col-sm-7 col-7">
+                                                    Москва, МО
+                                                </div>
+                                                <div class="calc-form-result-item-col_wrp mt-4 d-flex col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5">
+                                                    <div class="calc-form-result-item-col__title">
+                                                        Площадь:
+                                                    </div>
+                                                    <div class="calc-form-result-item-col__dots"></div>
+                                                </div>
+                                                <div class="calc-form-result-item-col__value mt-4 col-xl-7 col-lg-7 col-md-7 col-sm-7 col-7">
+                                                    21 сотка
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="calc-form-result-item-col calc-form-result-item-col2 col-xl-4 col-lg-4 col-md-4">
+                                            <div class="calc-form-result-item-col_spc row">
+                                                <div class="calc-form-result-item-col_wrp d-flex col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9">
+                                                    <div class="calc-form-result-item-col__title">
+                                                        Ориентировочная
+                                                        стоимость услуги:
+                                                    </div>
+                                                    <div class="calc-form-result-item-col__dots"></div>
+                                                </div>
+                                                <div class="calc-form-result-item-col__value col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                                    10 000 р.
+                                                </div>
+                                                <div class="calc-form-result-item-col_wrp mt-4 d-flex col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9">
+                                                    <div class="calc-form-result-item-col__title">
+                                                        Скидка:
+                                                    </div>
+                                                    <div class="calc-form-result-item-col__dots"></div>
+                                                </div>
+                                                <div class="calc-form-result-item-col__value text-accent mt-4 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                                    10%
+                                                </div>
+                                                <div class="calc-form-result-item-col_wrp mt-4 d-flex col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9">
+                                                    <div class="calc-form-result-item-col__title">
+                                                        Стоимость услуги
+                                                        с учетом скидки:
+                                                    </div>
+                                                    <div class="calc-form-result-item-col__dots"></div>
+                                                </div>
+                                                <div class="calc-form-result-item-col__value text-accent mt-4 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                                    9 000 р.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="calc-form-result-item-col calc-form-result-item-col3 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+                                            <div class="calc-form-result-item-col_spc row">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc-form-result-item">
+                                    <div class="calc-form-result-item_spc row">
+                                        <div class="calc-form-result-item-col calc-form-result-item-col1 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                                            <div class="calc-form-result-item-col_spc row">
+                                                <div class="calc-form-result-item-col_wrp d-flex col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5">
+                                                    <div class="calc-form-result-item-col__title">
+                                                        1. Услуга:
+                                                    </div>
+                                                    <div class="calc-form-result-item-col__dots"></div>
+                                                </div>
+                                                <div class="calc-form-result-item-col__value col-xl-7 col-lg-7 col-md-6 col-sm-6 col-6">
+                                                    Исполнительная съёмка
+                                                </div>
+                                                <div class="calc-form-result-item-col_wrp mt-4 d-flex col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5">
+                                                    <div class="calc-form-result-item-col__title">
+                                                        По адресу:
+                                                    </div>
+                                                    <div class="calc-form-result-item-col__dots"></div>
+                                                </div>
+                                                <div class="calc-form-result-item-col__value mt-4 col-xl-7 col-lg-7 col-md-7 col-sm-7 col-7">
+                                                    Москва, МО
+                                                </div>
+                                                <div class="calc-form-result-item-col_wrp mt-4 d-flex col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5">
+                                                    <div class="calc-form-result-item-col__title">
+                                                        Площадь:
+                                                    </div>
+                                                    <div class="calc-form-result-item-col__dots"></div>
+                                                </div>
+                                                <div class="calc-form-result-item-col__value mt-4 col-xl-7 col-lg-7 col-md-7 col-sm-7 col-7">
+                                                    21 сотка
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="calc-form-result-item-col calc-form-result-item-col2 col-xl-4 col-lg-4 col-md-4">
+                                            <div class="calc-form-result-item-col_spc row">
+                                                <div class="calc-form-result-item-col_wrp d-flex col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9">
+                                                    <div class="calc-form-result-item-col__title">
+                                                        Ориентировочная
+                                                        стоимость услуги:
+                                                    </div>
+                                                    <div class="calc-form-result-item-col__dots"></div>
+                                                </div>
+                                                <div class="calc-form-result-item-col__value col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                                    10 000 р.
+                                                </div>
+                                                <div class="calc-form-result-item-col_wrp mt-4 d-flex col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9">
+                                                    <div class="calc-form-result-item-col__title">
+                                                        Скидка:
+                                                    </div>
+                                                    <div class="calc-form-result-item-col__dots"></div>
+                                                </div>
+                                                <div class="calc-form-result-item-col__value text-accent mt-4 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                                    10%
+                                                </div>
+                                                <div class="calc-form-result-item-col_wrp mt-4 d-flex col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9">
+                                                    <div class="calc-form-result-item-col__title">
+                                                        Стоимость услуги
+                                                        с учетом скидки:
+                                                    </div>
+                                                    <div class="calc-form-result-item-col__dots"></div>
+                                                </div>
+                                                <div class="calc-form-result-item-col__value text-accent mt-4 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                                    9 000 р.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="calc-form-result-item-col calc-form-result-item-col3 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                                            <div class="calc-form-result-item-col_spc row">
+                                                <div class="calc-form-result-item-col_wrp d-flex col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+                                                    <div class="calc-form-result-item-col__title">
+                                                        Акция
+                                                    </div>
+                                                    <div class="calc-form-result-item-col__dots d-xl-block d-lg-none d-md-none d-sm-none d-none"></div>
+                                                </div>
+                                                <div class="calc-form-result-item-col__value text-big text-accent col-xl-8 col-lg-12 col-md-12 col-sm-12 col-12 pl-3 pl-xl-0 mt-3 mt-xl-0 mt-lg-0 mt-md-0">
                                                     Геоакция на Март
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="calc-form-result-price calc-form-result-price_spc row">
+                                    <p class="calc-form-result-price__note col-xl-5 col-lg-8 col-md-8 col-sm-12 col-12" id="result">
+                                        Ориентировочный бюджет
+                                        проекта с учётом скидки:
+                                    </p>
+                                    <div class="calc-form-result-item-col__dots"></div>
+                                    <p class="calc-form-result-price__ammount text-accent">
+                                        15 990 р.
+                                    </p>
+                                </div>
+                                <div class="btn_wrp">
+                                    <button class="btn" id="toStart">
+                                        <a href="index.html">Сделать ещё один расчёт</a>
+                                    </button>
                                 </div>
                             </div>
                         </section>

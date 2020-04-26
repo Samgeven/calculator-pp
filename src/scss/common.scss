@@ -1,8 +1,13 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: $fontFamily;
     font-weight: 300;
     font-size: 16px;
     line-height: 24px;
+    scroll-behavior: smooth;
 }
 
 h1 {
@@ -47,11 +52,90 @@ label {
 }
 
 .btn {
-    padding: 15px 55px 15px 32px;
+    padding: 12px 34px;
     border: 2px solid $accentColor;
+    font-weight: 300;
+    border-radius: 0;
 }
 
 .text-big {
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 20px !important;
+    line-height: 24px !important;
+}
+
+.text-accent {
+    color: $accentColor;
+}
+
+.text-dotted {
+    border-bottom: 1px dotted $darkGray;
+}
+
+.arrow-anchor {
+    background: url(../../dist/img/anchor.svg) no-repeat;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 7px;
+    right: -12px;
+}
+
+// Подсказка
+
+.calc-tooltip-note {
+    visibility: hidden;
+    font-size: 14px;
+    line-height: 20px;
+    width: 180px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 30px;
+    left: 3px;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    &:after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+    }
+}
+
+.calc__tooltip {
+    position: relative;
+}
+
+.calc__tooltip:hover .calc-tooltip-note {
+    visibility: visible;
+    opacity: 1;
+}
+
+// Фиксы брейкпойнтов
+
+@media (max-width: 1199.9px) {
+    .container {
+        max-width: 750px;
+    }
+}
+
+@media (max-width: 989.9px) {
+    .container {
+        max-width: 750px;
+    }
+}
+
+@media (max-width: 767.9px) {
+    .container {
+        max-width: 320px;
+    }
 }

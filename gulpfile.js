@@ -8,7 +8,7 @@ const browserSync = require('browser-sync').create();
 
 const paths = {
     css:['./src/scss/vars.scss', './src/scss/common.scss', './src/scss/index.scss'],
-    media:['./src/scss/vars.scss'],
+    media:['./src/scss/vars.scss', './src/scss/media-1200.scss', './src/scss/media-768.scss'],
     js:['./src/js/main.js']
   };
 
