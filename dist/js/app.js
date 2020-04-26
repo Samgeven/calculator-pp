@@ -45,10 +45,12 @@ form.children("div").steps({
 		}
 		setTimeout(changeText, 200);
 
+		$("ul[role='menu']").css('position', 'static')
 		$('ul[role="menu"]').css('display', 'flex');
 
     	if (newIndex == 0) {
-    		$('.calc-bar-line').css('background', `linear-gradient(90deg, #589bda 8%, #adadad 22%)`);
+			$('.calc-bar-line').css('background', `linear-gradient(90deg, #589bda 8%, #adadad 22%)`);
+			$("ul[role='menu']").css('position', 'absolute')
     	}
     	if (newIndex == 1) {
     		$('.calc-bar-line').css('background', `linear-gradient(90deg, #adadad 0%, #589bda 20%, #589bda 28%, #adadad 45%)`);

@@ -75,6 +75,16 @@
         }
     }
 
+    ul[role="menu"] {
+        bottom: -75px;
+    }
+
+    .calc-form-services_row .calc__tooltip {
+        position: absolute;
+        top: 8px;
+        right: auto;
+    }
+
     ul[role="menu"] li:first-child a {
         padding: 10px 34px 10px 58px;
     }
